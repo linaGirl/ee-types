@@ -13,11 +13,25 @@
 	console.log( type.error( new Error() ) );
 	console.log( type.regexp( /gg/ ) );
 	console.log( type.array( [] ) );
-
+	console.log( type.null( null ) );
+	console.log( type.undefined() );
+	console.log( type.buffer( new Buffer( "hi" ) ) );
 
 
 	console.log( type.stringArray( [ 1, "asas" ] ) );
-	console.log( type.ba( [  true, false ] ) );
+	console.log( type.ba( [ true, false ] ) );
 
 
-	console.log( type( "ee" ), type( /f/ ) );
+	console.log( 
+		  type( "ee" )
+		, type( /f/ )
+		, type( undefined )
+		, type( true )
+		, type( new Error( "oo" ) )
+		, type( function(){} )
+		, type( new Buffer( "w2" ) )
+		, type( null )
+		, type( new Date() )
+		, type( new Number(3) )
+		, type( [] )
+		, type( {} ) );

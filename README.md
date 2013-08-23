@@ -33,20 +33,16 @@ Reliabale type detection
 	type.error()
 	type.regexp()
 	type.array()
+	type.buffer()
+	type.null()
 	type.undefined()
 
 shortcut methods
 
-	type.s()
-	type.n()
-	type.b()
-	type.f()
-	type.o()
-	type.d()
-	type.e()
-	type.r()
-	type.a()
-	type.u()
+	type.s() // string
+	type.n() // number
+	type.b() // boolean
+	type.u() // undefined
 
 check array and their contents. for every type above there is an array method like the one below.
 
