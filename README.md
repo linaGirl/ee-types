@@ -17,7 +17,12 @@ Reliabale type detection
 	type.s( "michael" ); 					// true
 
 
+	type( 2 ) // number
+
+
 ## API
+
+	type() // returns the loawercase type
 
 	type.string()
 	type.number()
@@ -28,6 +33,7 @@ Reliabale type detection
 	type.error()
 	type.regexp()
 	type.array()
+	type.undefined()
 
 shortcut methods
 
@@ -40,6 +46,7 @@ shortcut methods
 	type.e()
 	type.r()
 	type.a()
+	type.u()
 
 check array and their contents. for every type above there is an array method like the one below.
 

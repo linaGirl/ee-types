@@ -18,3 +18,6 @@
 
 	console.log( type.stringArray( [ 1, "asas" ] ) );
 	console.log( type.ba( [  true, false ] ) );
+
+
+	console.log( type( "ee" ), type( /f/ ) );
