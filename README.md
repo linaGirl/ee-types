@@ -40,3 +40,8 @@ shortcut methods
 	type.e()
 	type.r()
 	type.a()
+
+check array and their contents. for every type above there is an array method like the one below.
+
+	type.stringArray( [ "hi", new String( "name" ), "is", "michael" ] )	 // true
+	type.sa( [ "hi", new String( "name" ), "is", "michael" ] )	 		 // true

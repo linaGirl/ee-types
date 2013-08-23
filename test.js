@@ -4,7 +4,7 @@
 
 
 
-	console.log( type.string( "some string" ) );
+	console.log( type.s( "some string" ) );
 	console.log( type.number( new Number(55) ) );
 	console.log( type.boolean( false ) );
 	console.log( type.function( function(){} ) );
@@ -13,3 +13,8 @@
 	console.log( type.error( new Error() ) );
 	console.log( type.regexp( /gg/ ) );
 	console.log( type.array( [] ) );
+
+
+
+	console.log( type.stringArray( [ 1, "asas" ] ) );
+	console.log( type.ba( [  true, false ] ) );
