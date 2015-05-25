@@ -4,7 +4,7 @@
     , "version":        "0.1.3"
     , "homepage":       "https://github.com/eventEmitter/ee-types"
     , "author":         "Michael van der Weg <michael@eventemitter.com> (http://eventemitter.com/)" 
-    , "licence":        "MIT"
+    , "license":        "MIT"
     , "repository": {
         "url":          "https://github.com/eventEmitter/ee-types"
     }
