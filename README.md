@@ -2,22 +2,24 @@
 
 Reliabale type detection
 
-## installation
-	
-	npm install ee-types
 
-## usage
-
-
-	var type = require( "ee-types" );
+[![npm](https://img.shields.io/npm/dm/ee-types.svg?style=flat-square)](https://www.npmjs.com/package/ee-types)
+[![Travis](https://img.shields.io/travis/eventEmitter/ee-types.svg?style=flat-square)](https://travis-ci.org/eventEmitter/ee-types)
+[![node](https://img.shields.io/node/v/ee-types.svg?style=flat-square)](https://nodejs.org/)
 
 
-	type.string( "nope" ); 					// true
-	type.strign( new String( "yeah" ) ); 	// true
-	type.s( "michael" ); 					// true
+## API
 
 
-	type( 2 ) // number
+	var type = require('ee-types');
+
+
+	type.string('nope'); 				// true
+	type.strign(new String('yeah')); 	// true
+	type.s('michael'); 					// true
+
+
+	type(2) // number
 
 
 ## API
@@ -28,7 +30,7 @@ Reliabale type detection
 	type.number()
 	type.boolean()
 	type.function()
-	type.object() 			// array, dates, erors, regexps & sometimes strings, numbers and bools are objects
+	type.object()
 	type.date()
 	type.error()
 	type.regexp()
@@ -36,6 +38,7 @@ Reliabale type detection
 	type.buffer()
 	type.null()
 	type.undefined()
+	type.symbol()
 
 shortcut methods
 
@@ -46,5 +49,5 @@ shortcut methods
 
 check array and their contents. for every type above there is an array method like the one below.
 
-	type.stringArray( [ "hi", new String( "name" ), "is", "michael" ] )	 // true
-	type.sa( [ "hi", new String( "name" ), "is", "michael" ] )	 		 // true
+	type.stringArray([ 'hi', new String('name'), 'is', 'michael' ])	 // true
+	type.sa([ 'hi', new String('name'), 'is', 'michael' ])	 		 // true

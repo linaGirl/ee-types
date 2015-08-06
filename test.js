@@ -22,7 +22,7 @@
 	console.log( type.ba( [ true, false ] ) );
 
 
-	console.log( 
+	console.log(
 		  type( "ee" )
 		, type( /f/ )
 		, type( undefined )
