@@ -1,7 +1,7 @@
 {
       "name"                        : "ee-types"
     , "description"                 : "Reliable type detection"
-    , "version"                     : "2.0.3"
+    , "version"                     : "2.0.4"
     , "homepage"                    : "https://github.com/eventEmitter/ee-types"
     , "author"                      : "Michael van der Weg <michael@joinbox.com> (http://joinbox.com/)"
     , "license"                     : "MIT"
@@ -10,16 +10,16 @@
         , "type"                    : "git"
     }
     , "engines": {
-        "node"                      : ">=v0.12.0"
+        "node"                      : ">=v4.2.1"
     }
     , "bugs": {
         "url"                       : "https://github.com/eventEmitter/ee-types/issues"
     }
     , "dependencies": {
-          "ee-class"                : "1.x.x"
+          "ee-class"                : "1.x"
     }
     , "devDependencies": {
-          "mocha"                   : "1.17.x"
+          "mocha"                   : "2.x"
     }
     , "optionalDependencies": {}
     , "keywords"                    : ["type-detection", "es6"]
