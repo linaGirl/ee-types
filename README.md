@@ -1,6 +1,6 @@
 # ee-types
 
-Reliabale type detection
+Easy and reliable type detection with ES6+ support.
 
 
 [![npm](https://img.shields.io/npm/dm/ee-types.svg?style=flat-square)](https://www.npmjs.com/package/ee-types)
@@ -10,44 +10,70 @@ Reliabale type detection
 
 ## API
 
+Explicity test for a type
 
-	var type = require('ee-types');
-
-
-	type.string('nope'); 				// true
-	type.strign(new String('yeah')); 	// true
-	type.s('michael'); 					// true
+    types.array([]) // true
 
 
-	type(2) // number
+Get the type of some input
+
+    types(/[a-z]+/gi) // regexp
 
 
-## API
 
-	type() // returns the loawercase type
+## Supported Types
 
-	type.string()
-	type.number()
-	type.boolean()
-	type.function()
-	type.object()
-	type.date()
-	type.error()
-	type.regexp()
-	type.array()
-	type.buffer()
-	type.null()
-	type.undefined()
-	type.symbol()
+- string
+- number
+- boolean
+- array
+- intArray
+- floatArray
+- object
+- function
+- symbol
+- date
+- regexp
+- error
+- undefined
+- buffer
+- null
+- arrayBuffer
+- map
+- weakMap
+- set
+- weakSet
+- dataView
+- float32Array
+- float64Array
+- int8Array
+- int16Array
+- int32Array
+- uInt8Array
+- uInt16Array
+- uInt32Array
+- uInt8ClampedArray
+- generator
+- promise
 
-shortcut methods
 
-	type.s() // string
-	type.n() // number
-	type.b() // boolean
-	type.u() // undefined
 
-check array and their contents. for every type above there is an array method like the one below.
+## Examples
 
-	type.stringArray([ 'hi', new String('name'), 'is', 'michael' ])	 // true
-	type.sa([ 'hi', new String('name'), 'is', 'michael' ])	 		 // true
+
+    var types = require('ee-types');
+
+
+    types.string('nope');                // true
+    types.strign(new String('yeah'));    // true
+
+
+    types(2) // number
+
+    types([]]) // array
+    types(new Array()]) // array
+    types(new Int8Array()]) // int8Array
+
+
+    types.promise(Promise.all()) // true
+

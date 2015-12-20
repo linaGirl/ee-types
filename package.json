@@ -1,7 +1,7 @@
 {
       "name"                        : "ee-types"
-    , "description"                 : "Reliabale type detection"
-    , "version"                     : "1.0.0"
+    , "description"                 : "Reliable type detection"
+    , "version"                     : "2.0.0"
     , "homepage"                    : "https://github.com/eventEmitter/ee-types"
     , "author"                      : "Michael van der Weg <michael@joinbox.com> (http://joinbox.com/)"
     , "license"                     : "MIT"
