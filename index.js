@@ -1,3 +1,5 @@
+(function() {
+    'use strict';
 
-
-	module.exports = require( "./lib/types" );
+    module.exports = require('./src/types');
+})();

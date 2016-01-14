@@ -8,6 +8,76 @@ Easy and reliable type detection with ES6+ support.
 [![node](https://img.shields.io/node/v/ee-types.svg?style=flat-square)](https://nodejs.org/)
 
 
+
+
+## Browser compatibility
+
+Desktop Browsers:
+
+- Chrome 7+
+- Firefox 4+
+- Safari 5.1+
+- IE 9+
+- Edge 25+
+
+Mobile Browsers:
+
+- Safari iOS 6+
+- Chrome for Android 38+
+- Android Browser 4.4.4+
+
+
+
+
+
+
+## Installation 
+
+using npm
+
+    npm i ee-types
+
+using bower
+
+    bower i ee-types
+
+## Importing
+
+node
+
+    let types = require('ee-types');
+
+
+
+require.js
+
+you have to configure require.js to point the bower prefix
+to the bower_components folder.
+    
+    requirejs.config({
+        paths: {
+            'bower': '/js/bower_components/'
+        }
+    });
+
+
+
+and finally load the component
+
+    require(['bower/ee-types/dist/ee-types.min'], function(types) {
+        
+    });
+
+
+
+Browser & Vanilla
+    
+    <script src="bower/ee-types/dist/ee-types.min" />
+
+    var types = window.ee.types;
+
+
+
 ## API
 
 Explicity test for a type

@@ -1,7 +1,7 @@
 {
       "name"                        : "ee-types"
     , "description"                 : "Reliable type detection"
-    , "version"                     : "2.0.4"
+    , "version"                     : "2.1.0"
     , "homepage"                    : "https://github.com/eventEmitter/ee-types"
     , "author"                      : "Michael van der Weg <michael@joinbox.com> (http://joinbox.com/)"
     , "license"                     : "MIT"
@@ -20,10 +20,17 @@
     }
     , "devDependencies": {
           "mocha"                   : "2.x"
+        , "gulp"                    : "3.x"
+        , "gulp-concat"             : "2.x"
+        , "gulp-sourcemaps"         : "1.x"
+        , "gulp-expect-file"        : "0.0.x"
+        , "gulp-uglify"             : "1.x"
     }
     , "optionalDependencies": {}
-    , "keywords"                    : ["type-detection", "es6"]
+    , "keywords"                    : ["type-detection", "type", "es6"]
     , "scripts": {
-        "test"                      : "./node_modules/mocha/bin/mocha --reporter spec"
+          "test"                    : "./node_modules/mocha/bin/_mocha --reporter spec"
+        , "posttest"                : "npm run js"
+        , "js"                      : "./node_modules/gulp/bin/gulp.js js js-min"
     }
 }
