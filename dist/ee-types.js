@@ -64,7 +64,7 @@
         , uInt32Array:          function(arg){ return Object.prototype.toString.call(arg) === '[object Uint32Array]'; }
         , uInt8ClampedArray:    function(arg){ return Object.prototype.toString.call(arg) === '[object Uint8ClampedArray]'; }
         , generator:            function(arg){ return Object.prototype.toString.call(arg) === '[object Generator]'; }
-        , promise:              function(arg){ return Object.prototype.toString.call(arg) === '[object Object]' && types.function(arg.then) && types.function(arg.catch); }
+        , promise:              function(arg){ return Object.prototype.toString.call(arg) === '[object Promise]' || (Object.prototype.toString.call(arg) === '[object Object]' && types.function(arg.then) && types.function(arg.catch)); }
     });
 
 

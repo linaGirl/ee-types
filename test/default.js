@@ -171,5 +171,9 @@
         it('Generators', function() {
             assert(type.generator((function* (){yield 1;})()));
         });
+
+        it('Promises', function() {
+            assert(type.promise(Promise.resolve()));
+        });
     });
 })();
