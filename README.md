@@ -1,5 +1,7 @@
 # ee-types
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/eventEmitter/ee-types.svg)](https://greenkeeper.io/)
+
 Easy and reliable type detection with ES6+ support.
 
 
