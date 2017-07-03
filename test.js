@@ -31,4 +31,5 @@
 		, type( new Date() )
 		, type( new Number(3) )
 		, type( [] )
-		, type( {} ) );
+		, type( {} )
+		, type( null ) );

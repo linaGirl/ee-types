@@ -47,7 +47,7 @@
         , error:                function(arg){ return arg instanceof Error; }
         , undefined:            function(arg){ return typeof arg === 'undefined'; }
         , buffer:               function(arg){ return typeof global === 'object' && typeof global.Buffer === 'function' && global.Buffer.isBuffer(arg); }
-        , null:                 function(arg){ return null === arg; }
+        , null:                 function(arg){ return null === arg || Object.prototype.toString.call(arg) === '[object Null]'; }
         , arrayBuffer:          function(arg){ return Object.prototype.toString.call(arg) === '[object ArrayBuffer]'; }
         , map:                  function(arg){ return Object.prototype.toString.call(arg) === '[object Map]'; }
         , weakMap:              function(arg){ return Object.prototype.toString.call(arg) === '[object WeakMap]'; }
