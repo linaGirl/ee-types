@@ -9,8 +9,8 @@ Easy and reliable type detection with ES6+ support.
 
 ## Compatibility
 
-For a versions supporting older browsers and node version please use ee-types version < 3.0.0.
-Compatible with node 10+ (--experimental-modules flag) and browsers supporting es modules.
+For a version supporting older browsers and node version please use ee-types version < 3.0.0.
+Compatible with node 10+ (`--experimental-modules` flag) and browsers supporting es modules.
 
 
 
