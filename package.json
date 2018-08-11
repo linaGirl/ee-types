@@ -1,16 +1,13 @@
 {
   "name": "ee-types",
-  "version": "2.2.1",
+  "version": "3.0.0",
   "description": "Reliable & easy Js & ES Type detection",
-  "main": "index.js",
+  "main": "./src/types.mjs",
   "directories": {
-    "example": "example",
     "test": "test"
   },
   "scripts": {
-    "test": "./node_modules/mocha/bin/_mocha --reporter spec",
-    "posttest": "npm run js",
-    "js": "./node_modules/gulp/bin/gulp.js js js-min"
+    "test": "node --no-warnings --experimental-modules ./node_modules/.bin/section ./test/*.mjs --dev --log-level=error+ --log-module=*"
   },
   "repository": {
     "type": "git",
@@ -28,14 +25,6 @@
   },
   "homepage": "https://github.com/eventEmitter/ee-types#readme",
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-concat": "^2.6.1",
-    "gulp-expect-file": "^1.0.0",
-    "gulp-sourcemaps": "^2.6.4",
-    "gulp-uglify": "^3.0.1",
-    "mocha": "^5.2.0"
-  },
-  "dependencies": {
-    "ee-class": "^1.4.0"
+    "section-tests": "^2.2.0"
   }
 }
