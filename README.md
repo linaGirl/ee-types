@@ -125,25 +125,71 @@ Get the type of some input
 - uInt8ClampedArray
 - generator
 - promise
+- someObject
+
+
+#### Object Types
+
+Since many of the types defined by javascript are just special 
+objects that also can be treated as normal objects ee-types has 
+are a bunch of methods that allow you to handle that correctly.
+
+For example `Map` is an object too. Or custom class where you 
+define a getter that returns a specific name for your object:
+
+```javascript
+const X = class {
+    get [Symbol.toStringTag]() {
+        return 'AQL query';;
+    }
+};
+
+console.log(Object.prototype.toString.call(new X()));
+// prints: [object AQL Query]
+```
+
+##### Check for a classic object
+
+```javascript
+types.object({}); // true
+types.object(new Map()); // false
+
+// be aware that if you are not explicitly testing
+// for an object any obecjt will be treated as one
+types({}) // 'object'
+types(new Map()) // 'object'
+
+```
+
+
+##### Check any type of object
+
+```javascript
+types.someObject({}); // true
+types.someObject(new Map()); // false
+types(new Map()) // 'object'
+
+```
 
 
 
 ## Examples
 
 
-    var types = require('ee-types');
+```javascript
+var types = require('ee-types');
 
 
-    types.string('nope');                // true
-    types.strign(new String('yeah'));    // true
+types.string('nope');                // true
+types.strign(new String('yeah'));    // true
 
 
-    types(2) // number
+types(2) // number
 
-    types([]]) // array
-    types(new Array()]) // array
-    types(new Int8Array()]) // int8Array
+types([]]) // array
+types(new Array()]) // array
+types(new Int8Array()]) // int8Array
 
 
-    types.promise(Promise.all()) // true
-
+types.promise(Promise.all()) // true
+```

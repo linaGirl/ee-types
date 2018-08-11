@@ -120,7 +120,7 @@
 
         it('Promises', function() {
             assert(type.promise(new Promise(() => {})));
-            assert(type.promise(Promise.all()));
+            assert(type.promise(Promise.all([])));
             assert(type.promise(Promise.resolve()));
         });
 
@@ -174,6 +174,18 @@
 
         it('Promises', function() {
             assert(type.promise(Promise.resolve()));
+        });
+
+        it('someObject', function() {
+            const X = class {
+                get [Symbol.toStringTag]() {
+                    return 'AQL query';;
+                }
+            };
+
+            assert(!type.object(new X));
+            assert(type.someObject(new X));
+            assert.equal(type(new X), 'object');
         });
     });
 })();

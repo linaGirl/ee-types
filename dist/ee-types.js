@@ -40,6 +40,7 @@
         , intArray:             function(arg){ return types.int8Array(arg) || types.int16Array(arg) || types.int32Array(arg) || types.uInt8Array(arg) || types.uInt16Array(arg) || types.uInt32Array(arg) || types.uInt8ClampedArray(arg); }
         , floatArray:           function(arg){ return Array.isArray(arg) || types.float32Array(arg); }
         , object:               function(arg){ return Object.prototype.toString.call(arg) === '[object Object]' && !types.promise(arg);}
+        , someObject:           function(arg){ return /\[object [^\]]+\]/i.test(Object.prototype.toString.call(arg));}
         , function:             function(arg){ return typeof arg === 'function'; }
         , symbol:               function(arg){ return typeof arg === 'symbol'; }
         , date:                 function(arg){ return arg instanceof Date && !isNaN(arg.valueOf()); }
@@ -108,7 +109,8 @@
                types.intArray(item) ? 'intArray' :
                types.floatArray(item) ? 'floatArray' :
                types.uInt8ClampedArray(item) ? 'uInt8ClampedArray' :
-               types.arrayBuffer(item) ? 'arrayBuffer' : 'unknown';
+               types.arrayBuffer(item) ? 'arrayBuffer' :
+               types.someObject(item) ? 'object' : 'unknown';
     };
 
 
