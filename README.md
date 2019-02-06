@@ -2,6 +2,8 @@
 
 Easy and reliable type detection with ES6+ support.
 
+Supported by [joinbox.com](https://joinbox.com/), your swiss node.js & javascript agency :rocket:
+
 
 [![npm](https://img.shields.io/npm/dm/ee-types.svg?style=flat-square)](https://www.npmjs.com/package/ee-types)
 [![Travis](https://img.shields.io/travis/eventEmitter/ee-types.svg?style=flat-square)](https://travis-ci.org/eventEmitter/ee-types)
