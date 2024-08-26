@@ -2,12 +2,13 @@
   "name": "ee-types",
   "version": "3.0.1",
   "description": "Reliable & easy Js & ES Type detection",
-  "main": "./src/types.mjs",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "node --no-warnings --experimental-modules ./node_modules/.bin/section ./test/*.mjs --dev --log-level=error+ --log-module=*"
+    "build": "node ./node_modules/.bin/tsc",
+    "start": "node ./node_modules/.bin/tsc && node dist/index.js --l --dev",
+    "clean": "rm -r build"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,12 @@
   },
   "homepage": "https://github.com/eventEmitter/ee-types#readme",
   "devDependencies": {
-    "section-tests": "^2.2.0"
-  }
+    "@tsconfig/node18": "^18.2.4",
+    "@types/node": "^22.5.0",
+    "section-tests": "^2.2.0",
+    "typescript": "^5.5.4"
+  },
+  "main": "dist/types.js",
+  "types": "dist/types.d.ts",
+  "type": "module"
 }
