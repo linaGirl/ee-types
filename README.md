@@ -1,6 +1,6 @@
 # ee-types
 
-Easy and reliable type detection with ES6+ support.
+Easy and reliable type detection
 
 
 [![npm](https://img.shields.io/npm/dm/ee-types.svg?style=flat-square)](https://www.npmjs.com/package/ee-types)
@@ -21,19 +21,6 @@ Compatible with node 10+ (`--experimental-modules` flag) and browsers supporting
 import types from 'ee-types';
 ```
 
-
-***browser***
-
-from html
-```
-<script type="module" src="node_modules/ee-types/src/types.mjs"></script>
-```
-
-from within a module
-
-```javascript
-import types from 'node_modules/ee-types/src/types.mjs';
-```
 
 
 
