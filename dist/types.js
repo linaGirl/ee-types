@@ -71,42 +71,5 @@ const typecheck = function (item) {
                                                                                                                                 types.arrayBuffer(item) ? 'arrayBuffer' :
                                                                                                                                     types.someObject(item) ? 'object' : 'unknown';
 };
-const type = function (item) {
-    return typecheck(item);
-};
-type.prototype.string = types.string;
-type.prototype.number = types.number;
-type.prototype.boolean = types.boolean;
-type.prototype.array = types.array;
-type.prototype.intArray = types.intArray;
-type.prototype.floatArray = types.floatArray;
-type.prototype.object = types.object;
-type.prototype.someObject = types.someObject;
-type.prototype.function = types.function;
-type.prototype.symbol = types.symbol;
-type.prototype.date = types.date;
-type.prototype.regexp = types.regexp;
-type.prototype.error = types.error;
-type.prototype.undefined = types.undefined;
-type.prototype.buffer = types.buffer;
-type.prototype.null = types.null;
-type.prototype.arrayBuffer = types.arrayBuffer;
-type.prototype.map = types.map;
-type.prototype.weakMap = types.weakMap;
-type.prototype.set = types.set;
-type.prototype.weakSet = types.weakSet;
-type.prototype.dataView = types.dataView;
-type.prototype.float32Array = types.float32Array;
-type.prototype.float64Array = types.float64Array;
-type.prototype.int8Array = types.int8Array;
-type.prototype.int16Array = types.int16Array;
-type.prototype.int32Array = types.int32Array;
-type.prototype.uInt8Array = types.uInt8Array;
-type.prototype.uInt16Array = types.uInt16Array;
-type.prototype.uInt32Array = types.uInt32Array;
-type.prototype.uInt8ClampedArray = types.uInt8ClampedArray;
-type.prototype.generator = types.generator;
-type.prototype.promise = types.promise;
-type.prototype.scalar = types.scalar;
-export default type;
+export default Object.assign((item) => typecheck(item), types);
 //# sourceMappingURL=types.js.map
